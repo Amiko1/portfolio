@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TheNavigation, TheHeader } from '@/components/layout/index'
+import { TheNavigation, TheHeader } from '@/components/layout'
 </script>
 
 <template>
