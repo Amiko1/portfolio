@@ -5,5 +5,7 @@ import { TheHero } from '@/components/homeSections'
 <template>
   <main>
     <TheHero class="h-section" />
+    <TheHero class="h-screen" />
+    <TheHero class="h-screen" />
   </main>
 </template>

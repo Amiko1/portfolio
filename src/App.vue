@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { TheNavigation, TheHeader } from '@/components/layout'
+import { CustomCursor } from '@/components/ui'
 </script>
 
 <template>
@@ -10,4 +11,5 @@ import { TheNavigation, TheHeader } from '@/components/layout'
     <RouterView />
   </div>
   <!-- <TheNavigation /> -->
+  <CustomCursor />
 </template>
