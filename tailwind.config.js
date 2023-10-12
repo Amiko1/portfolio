@@ -13,6 +13,9 @@ module.exports = {
       },
       lineHeight: {
         20: '100px'
+      },
+      colors: {
+        mainbg: '#17181a'
       }
     }
   },

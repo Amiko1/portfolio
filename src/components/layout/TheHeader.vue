@@ -5,7 +5,9 @@ import { HamburgerButton } from '@/components/ui'
 
 <template>
   <header class="flex justify-between">
-    <router-link to="/" class="font-abryl font-xl text-3xl font-semibold underline tracking-wide"
+    <router-link
+      to="/"
+      class="font-abryl font-xl text-3xl font-semibold underline tracking-wide active-cursor"
       >amyko</router-link
     >
     <HamburgerButton />
