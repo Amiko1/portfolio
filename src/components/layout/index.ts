@@ -1,4 +1,2 @@
-import TheHeader from './TheHeader.vue'
-import TheNavigation from './TheNavigation.vue'
-
-export { TheHeader, TheNavigation }
+export { default as TheHeader } from './TheHeader.vue'
+export { default as TheNavigation } from './TheNavigation.vue'

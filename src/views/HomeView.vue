@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { TheHero } from '@/components/homeSections'
+</script>
 
 <template>
-  <header></header>
-  <main></main>
-  <nav></nav>
+  <main>
+    <TheHero class="h-section" />
+  </main>
 </template>
