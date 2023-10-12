@@ -5,11 +5,13 @@ const x = ref(0)
 const y = ref(0)
 const isCursorActive = ref(false)
 const isBtnCursorActive = ref(false)
+const isUserUseCursor = ref(false)
 
 document.addEventListener('mousemove', cursor)
 document.addEventListener('mouseover', activeCursor)
 
 function cursor(event: MouseEvent) {
+  isUserUseCursor.value = true
   x.value = event.clientX
   y.value = event.clientY
 }
@@ -20,7 +22,6 @@ function activeCursor(event: MouseEvent) {
   if (!(target instanceof HTMLElement)) {
     return
   }
-  console.log(target)
 
   if (target.classList.contains('active-cursor')) {
     isCursorActive.value = true
@@ -35,8 +36,13 @@ function activeCursor(event: MouseEvent) {
 
 <template>
   <div
-    class="cursor hidden lg:block"
-    :class="{ actived: isCursorActive, 'btn-atctived': isBtnCursorActive }"
+    class="cursor"
+    :class="{
+      actived: isCursorActive,
+      'btn-atctived': isBtnCursorActive,
+      hidden: !isUserUseCursor,
+      block: isUserUseCursor
+    }"
     :style="{ left: x + 'px', top: y + 'px' }"
   ></div>
 </template>
@@ -60,7 +66,6 @@ function activeCursor(event: MouseEvent) {
 .cursor.actived {
   transform: scale(3);
   background: rgb(86, 124, 228);
-  z-index: -1;
 }
 
 .cursor.btn-atctived {
